@@ -33,9 +33,8 @@ function HC6Card({ cards }) {
     <>
       {cards.map((card) => (
         <div
-          className="w-full bg-white shadow p-3 rounded-lg cursor-pointer inline-block"
+          className="w-full bg-white shadow p-4 rounded-lg cursor-pointer inline-block"
           onClick={(e) => (card["url"] ? (window.location = card["url"]) : e.preventDefault())}
-          style={{ border: "1px solid #d9d9d9" }}
         >
           <div className="flex">
             <img

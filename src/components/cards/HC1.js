@@ -30,11 +30,11 @@ function HC1({ cards }) {
     <>
       {cards.map((card) => (
         <div
-          className="w-full bg-white  p-1 rounded-lg cursor-pointer inline-block"
+          className="w-full bg-white rounded-lg cursor-pointer inline-block"
           onClick={(e) => (card["url"] ? (window.location.href = card["url"]) : e.preventDefault())}
         >
           <div
-            className="flex w-full h-16 p-4 items-center shadow-md"
+            className="flex w-full h-16 p-3 rounded-lg items-center "
             style={{ backgroundColor: card["bg_color"] ? card["bg_color"] : "yellow" }}
           >
             <img

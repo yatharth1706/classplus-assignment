@@ -7,10 +7,11 @@ import HC9 from "./HC9";
 function CardGroupRow({ cardGroup }) {
   return (
     <div
-      className="mb-5 w-full whitespace-nowrap scrollbar-hide overflow-y-hidden"
+      className="mb-5 w-full rounded-lg  whitespace-nowrap scrollbar-hide overflow-y-hidden"
       style={{
         height: cardGroup["height"] ? cardGroup["height"] : "auto",
         overflowX: cardGroup["is_scrollable"] ? "scroll" : "hidden",
+        background: "white",
       }}
     >
       {cardGroup["design_type"] === "HC6" && <HC6 cards={cardGroup["cards"]} />}

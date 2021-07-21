@@ -25,7 +25,10 @@ function Results() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <div
+      className="w-full flex flex-col justify-center items-center"
+      style={{ background: "#f3f3f3" }}
+    >
       {!apiResponse ? (
         <img src={Loading} />
       ) : (
