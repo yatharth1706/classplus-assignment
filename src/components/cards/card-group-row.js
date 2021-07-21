@@ -7,7 +7,7 @@ import HC9 from "./HC9";
 function CardGroupRow({ cardGroup }) {
   return (
     <div
-      className="mb-5 w-full p-2 whitespace-nowrap scrollbar-hide overflow-y-hidden"
+      className="mb-5 w-full p-3 whitespace-nowrap scrollbar-hide overflow-y-hidden"
       style={{
         height: cardGroup["height"] ? cardGroup["height"] : "auto",
         overflowX: cardGroup["is_scrollable"] ? "scroll" : "hidden",
