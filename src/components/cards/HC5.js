@@ -1,4 +1,4 @@
-function HC1({ cards }) {
+function HC5({ cards }) {
   const getFormattedText = (title, formatted_title) => {
     let entities = formatted_title["entities"];
     if (entities.length > 0) {
@@ -15,18 +15,17 @@ function HC1({ cards }) {
     <>
       {cards.map((card) => (
         <div
-          className="w-full rounded-2xl cursor-pointer inline-block h-full mr-5"
+          className="w-full rounded-lg cursor-pointer inline-block h-auto mr-5"
           onClick={() => (window.location = card["url"])}
         >
           <div
-            className="flex w-full h-16 p-4 items-center shadow-md"
+            className="flex w-full p-4 rounded-lg items-center shadow-md mr-5 h-auto"
             style={{ backgroundColor: card["bg_color"] ? card["bg_color"] : "yellow" }}
           >
             <img
-              src={card["icon"]?.["image_url"] || card["icon"]?.["asset_type"]}
-              className="rounded-full h-12 w-12 mr-4"
+              src={card["bg_image"]?.["image_url"] || card["icon"]?.["asset_type"]}
+              className="rounded-full object-fit"
             />
-            <p>{getFormattedText(card["title"], card["formatted_title"])}</p>
           </div>
         </div>
       ))}
@@ -36,4 +35,4 @@ function HC1({ cards }) {
   );
 }
 
-export default HC1;
+export default HC5;

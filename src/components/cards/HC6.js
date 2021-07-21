@@ -1,8 +1,17 @@
 import { ChevronRightIcon } from "@heroicons/react/outline";
 
 function HC6Card({ cards }) {
-  const getFormattedTitle = (title, formatted_title) => {
-    return formatted_title["text"] ? formatted_title["text"] : title;
+  const getFormattedText = (title, formatted_title) => {
+    let entities = formatted_title["entities"];
+    if (entities.length > 0) {
+      let splittedText = title.split("{}");
+      for (let i = 0; i < entities.length; i++) {
+        splittedText[i] += entities[i];
+      }
+      return splittedText.join("");
+    } else {
+      return title;
+    }
   };
 
   return cards.length > 0 ? (
@@ -20,7 +29,7 @@ function HC6Card({ cards }) {
             />
             <div className="flex justify-between w-full">
               <p className={"text-" + card["formatted_title"]?.["align"] + "w-full font-semibold"}>
-                {getFormattedTitle(card["icon"], card["formatted_title"])}
+                {getFormattedText(card["title"], card["formatted_title"])}
               </p>
               <ChevronRightIcon className="h-6 w-6" />
             </div>
