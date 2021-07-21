@@ -29,7 +29,7 @@ function Results() {
       {!apiResponse ? (
         <img src={Loading} />
       ) : (
-        <div className="w-full p-5 flex flex-col">
+        <div className="w-full p-7 flex flex-col">
           {apiResponse["card_groups"].map((cardgroup_details) => (
             <CardGroupRow cardGroup={cardgroup_details} />
           ))}

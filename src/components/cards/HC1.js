@@ -30,7 +30,7 @@ function HC1({ cards }) {
     <>
       {cards.map((card) => (
         <div
-          className="w-full rounded-2xl cursor-pointer inline-block h-full mr-5"
+          className="w-full bg-white  p-1 rounded-lg cursor-pointer inline-block"
           onClick={(e) => (card["url"] ? (window.location.href = card["url"]) : e.preventDefault())}
         >
           <div
