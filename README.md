@@ -4,7 +4,7 @@
 
 ### Description 
 
-Built website mobile responsive in ReactJS. Main goal was to show contextual cards using response from given API: https://run.mocky.io/v3/fefcfbeb-5c12-4722-94ad-b8f92caad1ad
+Built mobile responsive web view in ReactJS. Main goal was to show contextual cards using response from given API: https://run.mocky.io/v3/fefcfbeb-5c12-4722-94ad-b8f92caad1ad
 
 ### Some screenshots
 
